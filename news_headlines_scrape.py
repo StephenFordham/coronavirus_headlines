@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 
+# headless implementation has not been added via Options class
 
 class CoronaVirusHeadlines(object):
 	def __init__(self):
@@ -29,3 +30,4 @@ class CoronaVirusHeadlines(object):
 
 virus_data = CoronaVirusHeadlines()
 virus_data.get_headlines()
+
