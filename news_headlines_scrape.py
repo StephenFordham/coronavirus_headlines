@@ -1,12 +1,16 @@
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.options import Options
 
 # headless implementation has not been added via Options class
 
 class CoronaVirusHeadlines(object):
 	def __init__(self):
-		self._driver = webdriver.Chrome()
+		headless_options = Options()
+		headless_options.add_argument('--headless')
+
+		self._driver = webdriver.Chrome(options=headless_options)
 
 	def get_headlines(self):
 
